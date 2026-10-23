@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+data/*
+!data/.gitkeep
+*.nii
+*.nii.gz
+*.pt
+*.pth
+*.ckpt
+.ipynb_checkpoints/
+.env
+.vscode/
