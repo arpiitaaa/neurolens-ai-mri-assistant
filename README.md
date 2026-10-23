@@ -1,19 +1,8 @@
 # NeuroLens AI: Agentic Brain MRI Research Assistant
  
-An end-to-end research prototype that analyses brain MRI scans, segments suspicious regions, estimates how confident the model is, and (planned) generates a radiology-style evidence report with an agent that flags uncertain cases for human review.
+A research project that aims to build an end-to-end system for brain MRI analysis: segmenting suspicious regions, estimating how confident the model is, and generating a radiology-style evidence report, with an agent that flags uncertain cases for human review.
  
 > **Disclaimer:** This is a research prototype built for learning and experimentation. It is **not** a medical device and must not be used for diagnosis or any clinical decision.
- 
-## Project status
- 
-| # | Component | Status |
-|---|-----------|--------|
-| 1 | 3D brain tumour segmentation baseline (MONAI SegResNet) | Done |
-| 2 | Uncertainty estimation (Monte Carlo dropout) | In progress |
-| 3 | Agentic quality control: low-confidence re-analysis and human-review flag | Planned |
-| 4 | Radiology-style report generation (template first, then vision-language model) | Planned |
-| 5 | Self-supervised pretraining on unlabeled MRI | Planned |
-| 6 | Diffusion-based denoising experiments | Planned |
  
 ## How it will work
  
@@ -104,11 +93,11 @@ Remove `--max-train` and `--max-val` to train on the full dataset (much slower p
 ```
 neurolens-ai-mri-assistant/
 ├── src/
-│   ├── segmentation/   # data loading, model, training (implemented)
-│   ├── agent/          # quality control and human-review logic (planned)
-│   ├── vlm/            # report generation (planned)
-│   ├── ssl/            # self-supervised pretraining (planned)
-│   └── diffusion/      # denoising experiments (planned)
+│   ├── segmentation/   # data loading, model, training
+│   ├── agent/          # quality control and human-review logic
+│   ├── vlm/            # report generation
+│   ├── ssl/            # self-supervised pretraining
+│   └── diffusion/      # denoising experiments
 ├── notebooks/
 ├── reports/
 ├── tests/
@@ -126,6 +115,3 @@ neurolens-ai-mri-assistant/
  
 - [MONAI](https://monai.io/) for the medical imaging framework.
 - Antonelli et al., "The Medical Segmentation Decathlon", *Nature Communications*, 2022, for the dataset.
-## Author
- 
-**Arpita Srivastava**  
